@@ -3,7 +3,7 @@
       <h3>Todos</h3>
       <div class="todos">
         <div v-for="todo in allTodos" :key="todo.id" class="todo">
-          {{todo.name}}
+          {{todo.title}}
         </div>
       </div>
   </div>
@@ -28,7 +28,11 @@ export default {
   computed:mapGetters(['allTodos']),
   created(){
     this.fetchTodos();
-  }
+  },
+ beforeMount(){
+   this.fetchTodos();
+ }
+  
 
 }
 </script>

@@ -1,17 +1,21 @@
 <template>
   <div id="app">
     <div class="container">
+      <AddTodo/>
       <Todos/>
+
     </div>
   </div>
 </template>
 
 <script>
-import Todos from './views/Todos'
+import Todos from './views/Todos';
+import AddTodo from '@/views/AddTodo';
 export default {
   name:"app",
     components:{
-      Todos
+      Todos,
+      AddTodo
     }
 }
 </script>
